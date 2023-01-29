@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // array destructruing //
+        let user = ["keval", 20, "gujarat", ['male', '18000']];
+
+        let [name, age, state, [gender, salary]] = user;
+
+        console.log(name);
+        console.log(age);
+        console.log(state);
+        console.log(gender);
+    </script>
+
+    <script>
+        // object destructring //
+
+        let users = {
+            names: "keval",
+            ages: 22,
+        }
+
+        let { names, ages } = users;
+
+        console.log(names);
+        console.log(ages);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+</head>
+<style>
+    #sub{
+        height:60px;
+        width:399px;
+        background-color:bisque;
+        text-align: right;
+        font-size:61px;
+        margin-left:9px;
+        border: 4px solid black;
+        
+    }
+    .main{
+        padding: 0px 0px;
+        margin-left:16px;
+        margin-top: 8px;
+
+    }
+    .btn{
+        margin-left:10px;
+        height: 39px;
+        width: 67px;
+        border: solid 2px black;
+        border-radius: 12px;
+        border-color: aliceblue;
+    }
+    #div1{
+        position: fixed;
+        height:87px;
+        margin:0px 0px;
+        margin-left:13px;
+    }
+    #div1:hover{
+        background-color: red;
+        font-size: 40px;
+    }
+    #div3:hover{
+        background-color: green;
+        font-size: 3px;
+    }
+    .container{
+        text-transform: uppercase;
+        font-size:large;
+        width: 43%;
+        margin-top:25px;
+        
+    }
+    #border{
+        border:2px solid black; size-adjust: 20px;
+        /* margin-right:105x; */
+        margin-left:92px;
+        background-color: black;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div id=border>
+        <span class="span"><input id="sub" type="text" value="0" maxlength="12" id="screen"> </span>
+        <div class="row">
+        <div class="main" >
+        <div id="div3" class= "btn btn-info"> mc</div>
+        <div class="btn btn-info">mr</div>
+        <div class="btn btn-info">ms</div>
+        <div class="btn btn-info">m+</div>
+        <div class="btn btn-info">m-</div>
+            <!-- </div> -->
+        <div class="row">
+            <div class="main">
+            <div class="btn btn-info" onclick="x2()">x^2</div>
+            <div class="btn btn-info" onclick="off()">ce</div>
+            <div class="btn btn-info" onclick="on()">c</div>
+            <div class="btn btn-info">+-</div>
+            <div class="btn btn-info" onclick="root()">√ </div>
+                <!--  -->
+            <div class="row">
+                <div class="main">
+                <div class="btn btn-info" onclick="nam(7)">7</div>
+                <div class="btn btn-info" onclick="nam(8)">8</div>
+                <div class="btn btn-info" onclick="nam(9)">9</div>
+                <div class="btn btn-info" onclick="action('/')">/</div>
+                <div class="btn btn-info" onclick="action('%')">%</div>
+                    <!--  -->
+                <div class="row">
+                    <div class="main">
+                    <div class="btn btn-info" onclick="nam(4)">4</div>
+                    <div class="btn btn-info" onclick="nam(5)">5</div>
+                    <div class="btn btn-info" onclick="nam(6)">6</div>
+                    <div class="btn btn-info" onclick="action('*')" >*</div>
+                    <div class="btn btn-info" onclick="action('1/x')">1/x</div>
+                    <!--  -->
+                    <div class="row">
+                        <div class="main">
+                        <div class="btn btn-info" onclick="nam(1)">1</div>
+                        <div class="btn btn-info" onclick="nam(2)">2</div>
+                        <div class="btn btn-info" onclick="nam(3)">3</div>
+                        <div class="btn btn-info" onclick="action('-')">-</div>
+                        <div id=div1 class="btn btn-info" onclick="equal()">=</div>
+                        <!--  -->
+                        <div class="row">
+                            <div class="main">
+                            <div class="btn btn-info" style="width:148px" onclick="nam(0)">0</div>
+                            <div class="btn btn-info" onclick="nam('.')">.</div>
+                            <div class="btn btn-info" onclick="action('+')">+</div>
+                        </div>
+          </div>
+              </div>
+                 </div>
+                    </div>
+                    <!-- <script src="../Bootstrap/js/bootstrap.min.js"></script> -->
+                    <!-- <script src="../Bootstrap/jquery/jquery-3.6.0.min.js"></script> -->
+                <script> 
+                    function nam(n)
+                    {   var sub =document.getElementById("sub").value;
+                        var_sub= sub.toString().length
+                        console.log(var_sub);
+                        if (var_sub.length<= 11)
+                        { 
+                            var_sub=sub.toString().substring(1,11);
+                            console.log(var_sub);
+                        }
+                        document.getElementById("sub").value = sub+n;
+                    
+                    }
+                    function action(n)
+                    {   action = n;
+                        console.log(n);
+                        val_1 =document.getElementById("sub").value;
+                        document.getElementById("sub").value= 0;
+                        console.log(val_1);
+                    }
+                    function off()
+                    {
+                        val_1 =document.getElementById("sub").value=""
+                        console.log(val_1);
+
+                    }
+                    function on()
+                    { 
+                        val_1=document.getElementById("sub").value="0"
+                        console.log(val_1);
+                        
+                    }
+                    function root()
+                    {
+                        var value_1 =document.getElementById("sub").value;
+                            var sum =Math.sqrt(value_1);
+                            console.log(value_1);
+                            var sum_length= sum.toString().length;
+                            if(sum_length >= 12)
+                            {
+                                var sum =sum.toString().substring(0,12);
+                            }
+                            document.getElementById("sub").value= sum;
+                    }
+                    function x2()
+                    {
+                        var value_2 =document.getElementById("sub").value;
+                            var sum =parseInt(value_2)*(value_2);
+                            console.log(value_2);
+                            document.getElementById("sub").value= sum;   
+                    }
+
+
+                
+                    
+                    function equal()
+                    {
+                        var val_2=document.getElementById("sub").value;
+                        if (action =="+") {
+                            
+                            var sum = parseInt(val_1)+parseInt(val_2);
+                        console.log(sum)
+                        }
+                        if (action =="-") {
+                            
+                            var sum = parseInt(val_1)-parseInt(val_2);
+                        console.log(sum)
+                        }
+                       if (action =="*") {
+                            var sum =parseInt(val_1)*parseInt(val_2);
+                            var sum_length= sum.toString().length;
+                            if(sum_length => 12)
+                            {
+                                var sum= "error";
+                            }
+                            // console.log(sum)
+                        }
+                        if (action == "/"){
+                            var sum =parseInt(val_1)/parseInt(val_2);
+                            // console.log(sum)
+                        }
+                        if (action =="%"){
+                            var sum =parseInt(val_1)*parseInt(val_1) / 100;
+                            console.log(sum)
+                           }
+                        // if (action =='root'){
+                        //     console.log(111);
+                        //     var sum =Math.sqrt(val_1);
+                        //     console.log(val_1);
+                        //     document.getElementById("sub").value= sum;
+                        //    }
+                        if(action == '1/x'){
+                            var sum = parseInt(val_1) / 100;
+                            
+                        }
+                        document.getElementById("sub").value= sum;
+                
+
+                        
+                        
+                    }
+                    
+                 </script>
+    
+</body>
+</html>

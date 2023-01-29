@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [
+            { name: "keval", last_name: "pansuriya", age: 18 },
+            { name: "keval1", last_name: "pansuriya", age: 18 },
+            { name: "keval2", last_name: "pansuriya", age: 18 },
+        ];
+        console.table(a);
+        for (var i = 0; i <= a.length; a++) {
+            document.write(a[i].name + "<br>")
+        }
+        for (var key in a) {
+            document.write(key + ":" + obj[key] + "<br>")
+        }
+
+    </script>
+
+    <script>
+        // map function //
+        var ary = [12, 21, 23, 33];
+
+        var test = ary.map(b)
+        document.write(test);
+
+        function b(a) {
+            return a * 10
+        }
+
+
+        // map functions object
+        var obj = [{
+            name: "keval",
+            lastname: "pansuriya",
+        }]
+
+        var map = obj.map(abcd);
+        document.write(map)
+        function abcd(annnn) {
+            return annnn.name + annnn.lastname
+        }
+
+
+    </script>
+</body>
+
+</html>

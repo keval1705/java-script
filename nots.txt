@@ -1,0 +1,16 @@
+java script ma input type = value
+java script ma div button = .innerHTML
+
+const = fix 
+ digit write 1  not use""
+
+
+1 what is var let const
+
+let a = keval
+let a = keval pansuriya
+
+console.log(a)
+error
+
+ 

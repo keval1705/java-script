@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var a = "This   is     My    Pen"
+
+
+        var test = a.toUpperCase();
+        var test = a.toLocaleLowerCase();
+        var test = a.includes("This")
+        var test = a.startsWith("This")
+        var test = a.endsWith("This")
+        var test = a.search("M")
+        var test = a.indexOf("i")
+        var test = a.lastIndexOf("i")
+        var test = a.replace("Pen", "Book")
+        var test = a.trim();
+        var test = a.charAt(3);
+        var test = a.concat("  this is  my book");
+        var test = a.split("i");
+        var test = a.repeat(2);
+        var test = a.slice(10);
+        var test = a.substr(0, 14);
+        document.write(test);
+    </script>
+
+    <script>
+        var a = 21 / 222;
+        // var test = isFinite(a);
+        var test = Number.isInteger(a);
+        var test = Number.isFinite(a);
+        var test = Number.isNaN(a);
+        console.log(test);
+    </script>
+</body>
+
+</html>

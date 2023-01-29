@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Function</title>
+</head>
+<body>
+    
+    <script>
+        
+        var a = 1;
+        function recursive()
+        {
+            if(a <= 20)
+            {   
+                if (a%5 == 0 && a%3 == 0) {
+                    document.write("USB DEVICE"+'<br>');
+                }
+                else if (a%3 == 0) {
+                    document.write("USB"+'<br>');
+                }
+                else if (a%5 == 0) {
+                    document.write("DEVICE"+'<br>');
+                }
+                else
+                {
+                    document.write(a+'<br>');
+                }
+                a++;
+                recursive();
+            }
+        }
+        recursive();
+    </script>
+</body>
+</html>

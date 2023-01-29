@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var ab = [1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 7, 8, 6];
+        // console.table(a);
+        // console.log(a[5]);
+        for (var a = 0; a < ab.length; a++) {
+            document.write(ab[a] + "<br>")
+        }
+    </script>
+
+    <script>
+        // multi // 
+        var array = ["keval", " pansuriya", " abcs"];
+        // array[2] = "ekeke"
+        document.write(array + "<br>");
+
+        // delete array[2]
+        // console.table(array);
+        var test = array.sort();
+        var test = array.reverse();
+        var test = array.pop();
+        var test = array.push("abcd", "abacac");
+        var test = array.shift();
+        var test = array.unshift("abababababab");
+        var b = ["kakakakak", "ajajajaj"];
+
+        var test = array.concat(b);
+        var test = array.join("----");
+
+        var d = array.splice(4, 5, "kkkkkkk", "kakakakakakakaka")
+
+        // document.write(test + "<br>");
+        var e = Array.isArray(array)
+        var f = array.indexOf("keval")
+
+        // search in arry //
+        var g = array.includes("abcd");
+        var h = array.toString();
+        var i = array.fill("ram")
+        var j = array.forEach(function (loop, index) {
+            document.write(index + loop + "<br>")
+        })
+
+
+        // document.write(i)
+        console.table(array)
+    </script>
+</body>
+
+</html>

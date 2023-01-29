@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+</head>
+<body>
+    <img src="./img/avenue-815297__340.webp" width="300px" height="200px">
+    <img src="./img/mountains-1412683__340.webp" width="300px" height="200px">
+    <img src="./img/beach-418742__480.jpg"   width="300px" height="200px">
+    <img src="./img/polynesia-3021072__480.jpg" width="300px" height="200px">
+    <img src="./img/road-1072821__340.jpg" width="300px" height="200px"><br>
+    <button onclick="prev()">prev</button>
+    <button onclick="next()">next</button>
+    <script>
+        no=0;
+        img_len = document.getElementsByTagName("img").length;
+        for (let i = 1; i<img_len; i++) 
+        {
+            document.getElementsByTagName("img")[i].style.display="none";
+        }
+        function next()
+        {
+            for (let i = 0; i<img_len; i++) 
+            document.getElementsByTagName("img")[i].style.display="none";
+            no++;
+            document.getElementsByTagName("img")[no].style.display="block";
+            console.log(no);
+            if(no > img_len -2 )
+            {
+                console.log(11);
+                no=-1;
+            }
+        }   
+        
+        function prev()
+        {
+            for (let i = 0; i < img_len; i++) 
+            {
+                document.getElementsByTagName("img")[i].style.display="none";
+            }
+            console.log(no);
+            if(no < 1)
+            {   
+                no = img_len;
+            }
+            no--;
+            document.getElementsByTagName("img")[no].style.display="block";
+        }
+
+    </script>
+</body>
+</html>

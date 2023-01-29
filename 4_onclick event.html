@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cilck()">click me</button>
+    <h1>hii</h1>
+    <h1>hii</h1>
+    <h1>hii</h1>
+    <h1>hii</h1>
+    <h1>hii</h1>
+    <h1>hii</h1>
+    <h1>hii</h1>
+    <h1>hii</h1>
+    <script>
+        var a = 8;
+        function cilck() {
+
+            for (i = 0; i <= a; i++) {
+
+                document.getElementsByTagName("h1")[5].style.backgroundColor = "red";
+                document.getElementsByTagName("h1")[2].style.backgroundColor = "black";
+                document.getElementsByTagName("h1")[3].style.backgroundColor = "pink";
+                document.getElementsByTagName("h1")[1].style.backgroundColor = "yellow";
+                document.getElementsByTagName("h1")[4].style.backgroundColor = "blue";
+                document.getElementsByTagName("h1")[6].style.backgroundColor = "green";
+                document.getElementsByTagName("h1")[8].innerHTML = "yes";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

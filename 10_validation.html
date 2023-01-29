@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validtion</title>
+    <link rel="icon" type="image/x-icon" href="../54713.jpg">
+
+</head>
+<body>
+    
+    <form onsubmit="keval()">
+    First Name : <input type="text" name="first_Name" placeholder="first name" id="first_name"><br><br>
+    Last  Name : <input type="text" name="last_name" placeholder="Last Name" id="last_name"><br><br>
+    E-mail     : <input type="email" name="email" placeholder="demo123@gmail.com" id="email"><br><br>
+    password   : <input type="password" name="password" id="password" ><br><br>
+    phone number: <input type="text" name="mo_no" ><br><br>
+    address    :<br><textarea cols="25" rows="5"></textarea><br><br>
+    <input type="submit" value="done">
+    </form>
+     
+    <script>
+        function keval()
+        {
+            var first_name=document.getElementById("first_name").value;
+            var last_name=document.getElementById("last_name").value;
+            var email=document.getElementById("email").value;
+            var email_regex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var password=document
+            
+            if (first_name =="" || first_name == null) 
+            {
+                alert("please enter the first name");
+            }
+            else if(first_name.length< 3 ){
+                alert("please enter minmum 3 charcters in first name");
+            }
+            else if(first_name.length > 25 ){
+                alert("please enter maximum 25 charcters in first name");
+            }
+            else if(last_name ==""||last_name == null ){
+                alert("please enter the last name");
+            }
+            else if(last_name.length < 3 ){
+                alert("please enter maximum 3 charcters in first name");
+            }
+            else if(last_name.length > 10 ){
+                alert("please enter maximum 10 charcters in first name");
+            }
+            else if(email=="" || email== null){
+                alert(" please enter email");
+            }
+            else if(!email_regex.test(email)){
+                alert("please enter the valid email ");
+            }
+        }
+
+        </script>
+</body>
+</html>
